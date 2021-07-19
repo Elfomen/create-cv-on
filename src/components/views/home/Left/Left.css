@@ -1,0 +1,32 @@
+.left > div {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: all 0.2s;
+}
+.left > div > .MuiSvgIcon-root {
+  color: grey;
+  margin-right: 25px;
+}
+.left > div:hover {
+  background-color: green;
+}
+.left > div:hover > p {
+  color: white;
+}
+
+.left > div > p {
+  color: grey;
+  font-size: 20px;
+}
+
+.left {
+  display: flex;
+  flex: 0.2;
+  height: 100vh;
+  background-color: #171717;
+  flex-direction: column;
+}

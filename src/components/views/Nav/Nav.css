@@ -1,0 +1,16 @@
+.navbar {
+  padding: 20px;
+  background-color: #171717;
+  margin: 10px 0;
+  display: flex;
+}
+
+.navbar > h1 {
+  color: #f4f4f4;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.navbar > h1:hover {
+  color: grey;
+}

@@ -1,0 +1,8 @@
+.pdf {
+  width: 30%;
+  height: 80vh;
+  position: fixed;
+  margin-right: 5px;
+  right: 0;
+  box-shadow: 0 0 6px black;
+}
