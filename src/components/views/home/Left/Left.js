@@ -7,14 +7,24 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import LanguageIcon from '@material-ui/icons/Language';
 import DeviceHubIcon from '@material-ui/icons/DeviceHub';
 import WorkIcon from '@material-ui/icons/Work';
+import { useHistory , Link } from 'react-router-dom'
 function Left() {
+    
+    const navi = useHistory()
+
+
+    const handleNavigate = (link) => {
+        navi.push(link)
+    }
+
+
     return (
         <div className="left">
-            <div>
+            <div onClick={() => handleNavigate("/personal/details")}>
                 <PersonAddIcon />
                 <p>Personal details</p>
             </div>
-            <div>
+            <div onClick={() => handleNavigate("/profile")}>
                 <PermContactCalendarIcon />
                 <p>Profile</p>
             </div>

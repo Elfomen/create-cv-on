@@ -3,7 +3,10 @@ import './pdf.css'
 function pdf() {
     return (
         <div className="pdf">
-            <h1>PDF</h1>
+            <div className="pdf_left">
+                
+            </div>
+            <div className="pdf_rigth"></div>
         </div>
     )
 }

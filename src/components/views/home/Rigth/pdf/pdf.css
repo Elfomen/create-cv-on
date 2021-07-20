@@ -5,4 +5,12 @@
   margin-right: 5px;
   right: 0;
   box-shadow: 0 0 6px black;
+  display: flex;
+}
+
+.pdf > .pdf_left {
+  height: 100%;
+  background-color: #00468b;
+  flex: 0.3;
+  border-radius: 2px;
 }
