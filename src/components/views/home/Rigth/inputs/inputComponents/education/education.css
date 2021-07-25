@@ -1,0 +1,71 @@
+.education > div {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.education > div > .MuiSvgIcon-root {
+  margin-right: 20px;
+  color: #151a1a;
+  margin-left: 5px;
+}
+.education > div > input {
+  outline: 0;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  width: 70%;
+}
+
+.education > h3 {
+  margin-top: 30px;
+}
+
+.education > .education_description {
+  border: 0.3px solid rgba(0, 0, 0, 0.4);
+}
+
+.new_education > button {
+  padding: 8px;
+  background-color: #151a1a;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  width: 80%;
+}
+
+.new_education > button:hover {
+  background-color: #908e8e;
+  color: #151a1a;
+}
+
+.remove_education,
+.new_education {
+  width: 100%;
+}
+
+.remove_education > button {
+  padding: 8px;
+  background-color: rgb(255, 58, 58);
+  color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  width: 80%;
+}
+
+.remove_education > button:hover {
+  background-color: #ff1313;
+  color: #f4f4f4;
+}
+
+.edu_but {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}

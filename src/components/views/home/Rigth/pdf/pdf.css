@@ -1,16 +1,113 @@
 .pdf {
-  width: 30%;
-  height: 80vh;
-  position: fixed;
+  width: 100%;
+  height: 100vh;
   margin-right: 5px;
   right: 0;
   box-shadow: 0 0 6px black;
   display: flex;
+  cursor: pointer;
+  overflow-y: scroll;
 }
 
 .pdf > .pdf_left {
   height: 100%;
-  background-color: #00468b;
+  display: flex;
+  flex-direction: column;
   flex: 0.3;
+  background-color: #00468b;
   border-radius: 2px;
+}
+
+.pdf > .pdf_left > img {
+  width: 99%;
+  height: 19%;
+  margin: 5px;
+  align-self: center;
+}
+
+.pdf > .pdf_right {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  margin-left: 10px;
+}
+
+.pdf > .pdf_right > .profile_view > h1 {
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.pdf > .pdf_right > .education_view > h1 {
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.profile_body {
+  margin-top: 10px;
+}
+
+.profile_body > ol,
+ul {
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-export {
+  position: fixed;
+  top: 23px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(47, 47, 47);
+  padding: 6px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+.btn-export:hover {
+  background-color: #00468b;
+}
+.btn-export > .MuiSvgIcon-root,
+.btn-export > p {
+  color: #f4f4f4;
+}
+.global {
+  width: 100%;
+}
+
+.title_school_city {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.education_title {
+  font-size: 13px;
+  color: #00468b;
+  flex: 1;
+}
+
+.education_dates {
+  font-size: 12px;
+  color: #00468b;
+}
+.educ_desc {
+  margin: 10px 0 5px;
+  color: #00468b;
+  font-weight: 800;
+}
+
+.big_title > h1 {
+  font-size: 18px;
+}
+.hover_pdf {
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+.hover_pdf:hover {
+  transform: scale(1.03);
 }

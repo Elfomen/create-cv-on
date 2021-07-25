@@ -28,23 +28,23 @@ function Left() {
                 <PermContactCalendarIcon />
                 <p>Profile</p>
             </div>
-            <div>
+            <div onClick={() => handleNavigate("/education")}>
                 <CastForEducationIcon />
                 <p>Education</p>
             </div>
-            <div>
+            <div onClick={() => handleNavigate("/employment")}>
                 <WorkIcon />
                 <p>Employment</p>
             </div>
-            <div>
+            <div onClick={() => handleNavigate("/skills")}>
                 <Brightness7Icon />
                 <p>Skills</p>
             </div>
-            <div>
+            <div onClick={() => handleNavigate("/language")}>
                 <LanguageIcon />
                 <p>Language</p>
             </div>
-            <div>
+            <div onClick = {() => handleNavigate("/hobbies")}>
                 <DeviceHubIcon />
                 <p>Hobbies</p>
             </div>

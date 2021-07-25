@@ -2,3 +2,20 @@
   text-align: center;
   margin-bottom: 35px;
 }
+
+.profile {
+  border: 0.3px solid rgba(0, 0, 0, 0.4);
+}
+
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.editor-class {
+  background-color: lightgray;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.toolbar-class {
+  border: 1px solid #ccc;
+}

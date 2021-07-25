@@ -2,3 +2,11 @@
   display: flex;
   flex: 0.8;
 }
+
+.rigth > .inp {
+  flex: 0.6;
+}
+
+.rigth > .pd {
+  flex: 0.39;
+}

@@ -1,0 +1,46 @@
+.hobies > div {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hobies > div > .MuiSvgIcon-root {
+  margin-right: 20px;
+  color: #151a1a;
+  margin-left: 5px;
+}
+.hobies > div > input {
+  outline: 0;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  width: 70%;
+}
+
+.hobies > h3 {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.button_pair {
+  display: flex;
+}
+
+.button_pair > button {
+  width: 12vw;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: none;
+  outline-width: 0;
+  cursor: pointer;
+  background-color: #171717;
+  color: #f4f4f4;
+  padding: 7px;
+  border-radius: 4px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+.button_pair > button:hover {
+  background-color: #a8a5a5;
+  color: #171717;
+}
