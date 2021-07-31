@@ -12,6 +12,19 @@ import { useReactToPrint } from 'react-to-print'
 import { setEducationPosition } from '../../../../redux/actions/education'
 import { setEmploymentPosition } from '../../../../redux/actions/employment'
 
+
+import PersonIcon from '@material-ui/icons/Person';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
+import HomeIcon from '@material-ui/icons/Home';
+import DateRangeIcon from '@material-ui/icons/DateRange';
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+
+
+
 class Pdf extends React.Component {
 
     render() {
@@ -19,7 +32,42 @@ class Pdf extends React.Component {
             <div className="pdf" id="pdf">
                 <div className="pdf_left">
                     <img src="https://pixy.org/src/17/thumbs350/173316.jpg" />
-
+                    <div className="names">
+                        <PersonIcon />
+                        <p>{this.props.personal_details.names}</p>
+                    </div>
+                    <div className="email">
+                        <MailIcon />
+                        <p>{this.props.personal_details.email}</p>
+                    </div>
+                    <div className="phone">
+                        <PhoneIcon />
+                        <p>{this.props.personal_details.phone}</p>
+                    </div>
+                    <div className="adress">
+                        <HomeIcon />
+                        <p>{this.props.personal_details.adress} - {this.props.personal_details.city} - {this.props.personal_details.zipcode}</p>
+                    </div>
+                    <div className="birthdate">
+                        <DateRangeIcon />
+                        <p>{this.props.personal_details.birth_date}</p>
+                    </div>
+                    <div className="driverslicence">
+                        <DriveEtaIcon />
+                        <p>{this.props.personal_details.driver_licence}</p>
+                    </div>
+                    <div className="linked">
+                        <LinkedInIcon />
+                        <p>{this.props.personal_details.linked}</p>
+                    </div>
+                    <div className="github">
+                        <GitHubIcon />
+                        <p>{this.props.personal_details.github}</p>
+                    </div>
+                    <div className="portfolio">
+                        <AccountTreeIcon />
+                        <p>{this.props.personal_details.port_folio}</p>
+                    </div>
                 </div>
                 <div className="pdf_right">
                     {this.props.profile.blocks && this.props.profile.blocks[0].text && <div className="profile_view">
@@ -99,6 +147,10 @@ const Print = () => {
     const employments = useSelector(state => state.employments)
     const { employment } = employments
 
+    const personalDet = useSelector(state => state.personal_detail)
+
+    const { personal_det } = personalDet
+
     const setEducsPos = (id) => {
         dispatch(setEducationPosition(id))
     }
@@ -109,7 +161,8 @@ const Print = () => {
         <div className="global">
             <Pdf ref={componentRef} profile={profile} education={education}
                 employment={employment} changePos={(id) => setEducsPos(id)}
-                changeEmpPos={setEmploymentPos}/>
+                changeEmpPos={setEmploymentPos}
+                personal_details={personal_det}/>
 
             <div className="btn-export" onClick={handlePrint}>
                 <PictureAsPdfIcon />

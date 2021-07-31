@@ -20,6 +20,7 @@ function Profile() {
 
     const { profile } = prof
     
+    
     const onEditorStateChange = (editorState) => {
         setEditorState({editorState})
         setChanged(!changed)

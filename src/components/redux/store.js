@@ -10,10 +10,13 @@ import { educationReducers } from './reducers/education'
 
 import { employmentReducers } from './reducers/employment'
 
+import { personal_details_reducers } from './reducers/personal_details'
+
 const reducers = combineReducers({
     profile: profileReducers,
     educations: educationReducers,
-    employments: employmentReducers
+    employments: employmentReducers , 
+    personal_detail : personal_details_reducers
 })
 
 const middlewares = [thunk]

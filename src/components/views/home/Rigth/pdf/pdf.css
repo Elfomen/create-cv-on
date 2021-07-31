@@ -111,3 +111,20 @@ ul {
 .hover_pdf:hover {
   transform: scale(1.03);
 }
+
+.pdf_left > div{
+  margin-bottom: 20px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.pdf_left > div > .MuiSvgIcon-root{
+  color: rgb(230, 228, 228);
+  font-size: small;
+  margin-right: 4px;
+}
+.pdf_left > div > p{
+  color: rgb(230, 228, 228);;
+  font-size: 12px;
+}
