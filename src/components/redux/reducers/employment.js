@@ -1,6 +1,6 @@
 import * as employment_constants from '../constants/employment'
 
-export const employmentReducers = (state = { employment: [] }, actions) => {
+export const employmentReducers = (state = { employment: [] , position_changed : false }, actions) => {
     switch (actions.type) {
         case employment_constants.ADD_EMPLOYMENT_DESCRIPTION:
             const modifEmp = state.employment.filter((emp, i) => (
@@ -49,6 +49,11 @@ export const employmentReducers = (state = { employment: [] }, actions) => {
                     employment : state.employment.filter((emp , i) => (
                         i!==state.employment.length-1
                     ))
+                }
+            case employment_constants.EMPLOYMENT_POSITION_CHANGED:
+                return{
+                    ...state , 
+                    position_changed: !state.position_changed
                 }
         default:
             return state

@@ -19,3 +19,11 @@
 .toolbar-class {
   border: 1px solid #ccc;
 }
+
+
+@media(max-width:700px){
+  .profile > h1{
+    font-size: 15px;
+  }
+}
+

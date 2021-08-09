@@ -31,3 +31,9 @@ export const deleteEducation = () => (dispatch) => {
         type : education_constants.DELETE_EDUCATION
     })
 }
+
+export const change_education_position = () => dispatch => {
+    dispatch({
+        type : education_constants.EDUCATION_POSITION_CHANGED
+    })
+}

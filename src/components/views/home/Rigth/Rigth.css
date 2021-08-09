@@ -10,3 +10,23 @@
 .rigth > .pd {
   flex: 0.39;
 }
+@media(max-width:1390px){
+  .rigth{
+    flex: 1;
+  }
+  .rigth > .pd{
+    flex: 0.5;
+  }
+  .rigth > .inp{
+    flex: 0.5;
+  }
+}
+
+@media(max-width:875px){
+  .rigth{
+    flex-direction: column;
+  }
+  .rigth > .pd{
+    margin: 0px  7px;;
+  }
+}

@@ -34,7 +34,10 @@ function EMPLOYMENT() {
 
     const employments = useSelector(state => state.employments)
 
-    const { employment } = employments
+    const { employment , position_changed } = employments
+
+
+    
 
     useEffect(() => {
         try {
@@ -52,7 +55,9 @@ function EMPLOYMENT() {
 
         }
 
-    }, [employment.length&&employment[employment.length - 1].position])
+    }, [position_changed])
+
+    
 
     useEffect(() => {
         dispatch(add_employment({

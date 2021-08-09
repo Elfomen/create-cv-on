@@ -1,0 +1,72 @@
+.sidedrawer{
+    width: 30vw;
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-out;
+}
+
+.sidedrawer.show{
+    transform : translateX(0)
+}
+.sidedrawer > div {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition-timing-function: ease-in;
+    transition: all 0.2s;
+  }
+  .sidedrawer > div > .MuiSvgIcon-root {
+    color: grey;
+    margin-right: 25px;
+  }
+  .sidedrawer > div:hover {
+    background-color: green;
+  }
+  .sidedrawer > div:hover > p {
+    color: white;
+  }
+  
+  .sidedrawer > div > p {
+    color: grey;
+    font-size: 20px;
+  }
+  
+  .sidedrawer {
+    display: flex;
+    flex: 0.2;
+    height: 100vh;
+    background-color: #171717;
+    flex-direction: column;
+  }
+
+  @media(max-width : 840px){
+      .sidedrawer{
+          width: 40vw;
+      }
+      .sidedrawer > div>p , .sidedrawer > div>.MuiSvgIcon-root{
+          font-size: 16px;
+      }
+  }
+
+  @media(max-width : 470px){
+    .sidedrawer{
+        width: 45vw;
+    }
+    .sidedrawer > div>p , .sidedrawer > div>.MuiSvgIcon-root{
+        font-size: 12px;
+    }
+  }
+
+  @media(max-width : 350px){
+    .sidedrawer{
+        width: 55vw;
+    }
+    .sidedrawer > div>p , .sidedrawer > div>.MuiSvgIcon-root{
+        font-size: 10px;
+    }
+  }

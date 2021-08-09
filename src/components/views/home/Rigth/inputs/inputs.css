@@ -6,3 +6,11 @@
   border-radius: 5px;
   overflow-y: scroll;
 }
+
+@media(max-width:875px){
+  .inputs{
+    height: fit-content;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+}

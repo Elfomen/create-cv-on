@@ -6,7 +6,6 @@
   box-shadow: 0 0 6px black;
   display: flex;
   cursor: pointer;
-  overflow-y: scroll;
 }
 
 .pdf > .pdf_left {

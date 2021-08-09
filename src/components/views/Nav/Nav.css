@@ -14,3 +14,26 @@
 .navbar > h1:hover {
   color: grey;
 }
+
+.drop{
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.drop:hover{
+  color: grey;
+}
+
+.link_drop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3vw;
+  display: none;
+}
+
+@media(max-width:1390px){
+  .link_drop{
+    display: flex;
+  }
+}

@@ -30,3 +30,10 @@ export const deleteemployment = () => (dispatch) => {
         type : employment_constants.DELETE_EMPLOYMENT
     })
 }
+
+export const change_position = () => dispatch => {
+    dispatch({
+        type : employment_constants.EMPLOYMENT_POSITION_CHANGED
+    })
+}
+

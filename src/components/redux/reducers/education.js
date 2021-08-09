@@ -1,6 +1,6 @@
 import * as EducationConstants from '../constants/education'
 
-export const educationReducers = (state = { education : []  } , actions) => {
+export const educationReducers = (state = { education : [] , position_changed : false  } , actions) => {
     switch(actions.type){
         case EducationConstants.ADD_EDUCATION_DESCRIPTION:
             const modifEduc = state.education.filter((educ,i) => (
@@ -49,6 +49,16 @@ export const educationReducers = (state = { education : []  } , actions) => {
                 education : state.education.filter((educ , i) => (
                     i!==state.education.length-1
                 ))
+            }
+        case EducationConstants.SET_EDUCATION_POSITION:
+            return{
+                ...state , 
+                position_changed : !state.position_changed
+            }
+        case EducationConstants.EDUCATION_POSITION_CHANGED:
+            return{
+                ...state , 
+                position_changed : !state.position_changed
             }
         default:
             return state

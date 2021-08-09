@@ -69,3 +69,23 @@
   align-items: center;
   width: 100%;
 }
+
+
+@media(max-width:600px){
+
+  .education > h1{
+    font-size: 16px;
+  }
+  .education > div > input{
+    font-size: 13px;
+  }
+}
+
+@media(max-width:450px){
+  .education > h1{
+    font-size: 14px;
+  }
+  .education_details > div > input{
+    font-size: 11px;
+  }
+}

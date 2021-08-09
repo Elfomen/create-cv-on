@@ -45,7 +45,7 @@ function Education() {
 
     const educations = useSelector(state => state.educations)
 
-    const { education } = educations
+    const { education , position_changed } = educations
 
     useEffect(() => {
         try {
@@ -63,7 +63,7 @@ function Education() {
 
         }
 
-    }, [education.length&&education[education.length-1].title])
+    }, [position_changed])
 
     useEffect(() => {
         dispatch(add_education({

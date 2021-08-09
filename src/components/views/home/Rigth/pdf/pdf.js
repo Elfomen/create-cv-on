@@ -9,8 +9,9 @@ import Line from '../../../../Line/Line'
 import SHORT_LINE from '../../../../Line_Short/Ls'
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { useReactToPrint } from 'react-to-print'
-import { setEducationPosition } from '../../../../redux/actions/education'
-import { setEmploymentPosition } from '../../../../redux/actions/employment'
+import { setEducationPosition, change_education_position } from '../../../../redux/actions/education'
+import { setEmploymentPosition , change_position } from '../../../../redux/actions/employment'
+
 
 
 import PersonIcon from '@material-ui/icons/Person';
@@ -85,18 +86,20 @@ class Pdf extends React.Component {
                     }
 
                     {this.props.education.length && this.props.education[0].description && this.props.education[0].description.blocks[0].text && this.props.education.map((educat , i) => (
-                        <div className="education_view hover_pdf" onClick={() => this.props.changePos(i)}>
+                       
+                            <div className="education_view hover_pdf" onClick={() => this.props.changePos(i)}>
 
-                            <div className="title_school_city">
-                                <p className="education_title">{educat.title}</p>
-                                <p className="education_title">{educat.school} - {educat.city}</p>
+                                <div className="title_school_city">
+                                    <p className="education_title">{educat.title}</p>
+                                    <p className="education_title">{educat.school} - {educat.city}</p>
+                                </div>
+
+                                <p className="education_dates">{educat.start_date} - {educat.end_date}</p>
+                                <p className="educ_desc">Description</p>
+                                <div className="education_body" dangerouslySetInnerHTML={{ __html: draftToHtml(educat.description) }}></div>
+                                <br></br><br></br>
                             </div>
-
-                            <p className="education_dates">{educat.start_date} - {educat.end_date}</p>
-                            <p className="educ_desc">Description</p>
-                            <div className="education_body" dangerouslySetInnerHTML={{ __html: draftToHtml(educat.description) }}></div>
-                            <SHORT_LINE />
-                        </div>
+                        
 
                     ))
                     }
@@ -118,7 +121,7 @@ class Pdf extends React.Component {
                             <p className="education_dates">{emp.start_date} - {emp.end_date}</p>
                             <p className="educ_desc">Description</p>
                             <div className="education_body" dangerouslySetInnerHTML={{ __html: draftToHtml(emp.description) }}></div>
-                            <SHORT_LINE />
+                            <br></br><br></br>
                         </div>
 
                     ))}
@@ -152,21 +155,24 @@ const Print = () => {
     const { personal_det } = personalDet
 
     const setEducsPos = (id) => {
+        dispatch(change_education_position())
         dispatch(setEducationPosition(id))
     }
+
     const setEmploymentPos = (id) => {
+        dispatch(change_position())
         dispatch(setEmploymentPosition(id))
     }
     return (
         <div className="global">
             <Pdf ref={componentRef} profile={profile} education={education}
-                employment={employment} changePos={(id) => setEducsPos(id)}
+                employment={employment} changePos={setEducsPos}
                 changeEmpPos={setEmploymentPos}
                 personal_details={personal_det}/>
 
             <div className="btn-export" onClick={handlePrint}>
                 <PictureAsPdfIcon />
-                <p>Export PDF</p>
+                <p>View PDF</p>
             </div>
         </div>
 

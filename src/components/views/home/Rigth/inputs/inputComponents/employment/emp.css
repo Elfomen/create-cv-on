@@ -24,3 +24,23 @@
 .employment > .education_description {
   border: 0.3px solid rgba(0, 0, 0, 0.4);
 }
+
+
+@media(max-width:600px){
+
+  .employment > h1{
+    font-size: 16px;
+  }
+  .employment > div > input{
+    font-size: 13px;
+  }
+}
+
+@media(max-width:450px){
+  .employment > h1{
+    font-size: 14px;
+  }
+  .employment_details > div > input{
+    font-size: 11px;
+  }
+}
